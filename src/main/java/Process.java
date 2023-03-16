@@ -6,7 +6,6 @@ public class Process {
     private final int arrivalTime;
     private final int timeNeeded;
     private int timeLeft;
-    private boolean isDone = false;
 
     public Process(int arrivalTime, int timeNeeded) {
         this.arrivalTime = arrivalTime;
@@ -22,8 +21,10 @@ public class Process {
         timeLeft -= time;
         if (timeLeft < 0 || time < 1)
             throw new InvalidParameterException("Incorrect time value");
-        else if (timeLeft == 0)
-            isDone = true;
+    }
+
+    public boolean isDone() {
+        return timeLeft == 0;
     }
 
     public int getArrivalTime() {
@@ -38,7 +39,4 @@ public class Process {
         return timeLeft;
     }
 
-    public boolean getIsDone() {
-        return isDone;
-    }
 }
