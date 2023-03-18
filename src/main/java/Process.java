@@ -1,26 +1,20 @@
 import java.security.InvalidParameterException;
 
 public class Process {
-
-//    private String name;
     private final int arrivalTime;
-    private final int timeNeeded;
+    private final int timeTotal;
     private int timeLeft;
 
-    public Process(int arrivalTime, int timeNeeded) {
+    public Process(int arrivalTime, int timeTotal) {
         this.arrivalTime = arrivalTime;
-        this.timeNeeded = timeNeeded;
-        this.timeLeft = timeNeeded;
+        this.timeTotal = timeTotal;
+        this.timeLeft = timeTotal;
     }
 
-//    public boolean exists(int currentTime) {
-//        return currentTime >= arrivalTime;
-//    }
-
     public void execute(int time) {
-        timeLeft -= time;
-        if (timeLeft < 0 || time < 1)
+        if (time > timeLeft || time < 1)
             throw new InvalidParameterException("Incorrect time value");
+        timeLeft -= time;
     }
 
     public boolean isDone() {
@@ -31,12 +25,21 @@ public class Process {
         return arrivalTime;
     }
 
-    public int getTimeNeeded() {
-        return timeNeeded;
+    public int getTimeTotal() {
+        return timeTotal;
     }
 
     public int getTimeLeft() {
         return timeLeft;
+    }
+
+    @Override
+    public String toString() {
+        return "Process{" +
+                "arrivalTime=" + arrivalTime +
+                ", timeTotal=" + timeTotal +
+                ", timeLeft=" + timeLeft +
+                '}';
     }
 
 }
