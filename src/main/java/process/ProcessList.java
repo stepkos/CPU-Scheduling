@@ -1,6 +1,7 @@
 package process;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 
@@ -29,8 +30,15 @@ public class ProcessList {
             ));
     }
 
-    public List<Process> getInnerList() {
+    public List<Process> getList() {
         return processList;
+    }
+
+    public List<Process> getExistsAndNotDoneList(int time) {
+        return processList.stream()
+                .filter(x -> x.exists(time))
+                .filter(x -> !x.isDone())
+                .toList();
     }
 
     public ProcessList getExistsAndNotDone(int time) {
@@ -38,6 +46,14 @@ public class ProcessList {
                 .filter(x -> x.exists(time))
                 .filter(x -> !x.isDone())
                 .toList());
+    }
+
+    public void sort(Comparator<? super Process> comp) {
+        processList.sort(comp);
+    }
+
+    public boolean isDone() {
+        return processList.stream().allMatch(Process::isDone);
     }
 
     public void printAll() {

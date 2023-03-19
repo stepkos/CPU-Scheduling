@@ -15,6 +15,12 @@ public class Process {
         this.timeLeft = timeTotal;
     }
 
+    public int execute() {
+        int timeLeft = this.timeLeft;
+        this.timeLeft = 0;
+        return timeLeft;
+    }
+
     public void execute(int time) {
         if (time > timeLeft || time < 1)
             throw new InvalidParameterException("Incorrect time value");
