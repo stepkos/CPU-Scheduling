@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30c2f282-be31-46c1-b999-1059cd292848" name="Changes" comment="FCFS Stats">
+    <list default="true" id="30c2f282-be31-46c1-b999-1059cd292848" name="Changes" comment="Refactoring">
+      <change afterPath="$PROJECT_DIR$/src/main/java/algorithms/SJF.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/process/Process.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/process/Process.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/process/ProcessList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/process/ProcessList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +64,9 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="algorithms" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -74,7 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1678925695600</updated>
       <workItem from="1678925696459" duration="4265000" />
-      <workItem from="1679166347984" duration="13801000" />
+      <workItem from="1679166347984" duration="15365000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1678925895631</created>
@@ -125,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679298320762</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Refactoring">
+      <created>1679298727345</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679298727345</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +149,7 @@
     <MESSAGE value="Improve Process and ProcessList" />
     <MESSAGE value="Run FCFS" />
     <MESSAGE value="FCFS Stats" />
-    <option name="LAST_COMMIT_MESSAGE" value="FCFS Stats" />
+    <MESSAGE value="Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
   </component>
 </project>
