@@ -5,14 +5,14 @@ import java.security.InvalidParameterException;
 public class Process {
     private final int id;
     private final int arrivalTime;
-    private final int timeTotal;
+    private final int totalTime;
     private int timeLeft;
 
-    public Process(int id, int arrivalTime, int timeTotal) {
+    public Process(int id, int arrivalTime, int totalTime) {
         this.id = id;
         this.arrivalTime = arrivalTime;
-        this.timeTotal = timeTotal;
-        this.timeLeft = timeTotal;
+        this.totalTime = totalTime;
+        this.timeLeft = totalTime;
     }
 
     public int execute() {
@@ -43,8 +43,8 @@ public class Process {
         return arrivalTime;
     }
 
-    public int getTimeTotal() {
-        return timeTotal;
+    public int getTotalTime() {
+        return totalTime;
     }
 
     public int getTimeLeft() {
@@ -56,7 +56,7 @@ public class Process {
         return "Process{" +
                 "id=" + id +
                 ", arrivalTime=" + arrivalTime +
-                ", timeTotal=" + timeTotal +
+                ", totalTime=" + totalTime +
                 ", timeLeft=" + timeLeft +
                 '}';
     }

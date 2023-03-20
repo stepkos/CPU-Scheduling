@@ -60,7 +60,7 @@ public class ProcessList {
         System.out.println("| ------------------------------------------- |");
         System.out.println("|     id | arrivalTime | timeTotal | timeLeft |");
         processList.forEach(x -> System.out.printf("| %6d | %11d | %9d | %8d |\n",
-                x.getId(), x.getArrivalTime(), x.getTimeTotal(), x.getTimeLeft()));
+                x.getId(), x.getArrivalTime(), x.getTotalTime(), x.getTimeLeft()));
         System.out.println("| ------------------------------------------- |\n");
     }
 
