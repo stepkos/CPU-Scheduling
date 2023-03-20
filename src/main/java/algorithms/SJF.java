@@ -39,7 +39,7 @@ public class SJF {
         System.out.println("Change content amount: " + listSize);
         System.out.println("Execution time: " + executionTime);
         System.out.println("Break time: " + breakTime);
-        System.out.println("Avg waiting time: " + ((listSize > 0) ? summaryWaitingTime / listSize : "No processes"));
+        System.out.println("Avg waiting time: " + (listSize > 0 ? summaryWaitingTime / listSize : "No processes"));
         System.out.println("Max waiting time: " + maxWaitingTime);
         System.out.println();
     }

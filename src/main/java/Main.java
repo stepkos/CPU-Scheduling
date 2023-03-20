@@ -1,9 +1,7 @@
 import algorithms.FCFS;
+import algorithms.RR;
 import algorithms.SJF;
-import process.Process;
 import process.ProcessList;
-
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,6 +13,10 @@ public class Main {
         ProcessList processList2 = new ProcessList(2000, 123);
         SJF sjf = new SJF(processList2);
         sjf.execute();
+
+        ProcessList processList3 = new ProcessList(2000, 123);
+        RR rr = new RR(processList3);
+        rr.execute(12);
 
 
         // TODO ide czasu do rozpoczecia lub od statniego wykonania
