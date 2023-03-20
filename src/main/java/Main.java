@@ -12,5 +12,8 @@ public class Main {
         fcfs.execute();
 
 
+        // TODO ide czasu do rozpoczecia lub od statniego wykonania
+
+
     }
 }
