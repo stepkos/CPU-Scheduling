@@ -13,7 +13,7 @@ public class RR implements ExecutableWithStatistic {
     private final int quantum;
     private int executionTime = 0;
     private int breakTime = 0;
-    private int summaryWaitingTime = 0;
+    private long summaryWaitingTime = 0;
     private int maxWaitingTime = 0;
     private int changeContent = 0;
 
@@ -61,13 +61,13 @@ public class RR implements ExecutableWithStatistic {
         }
 
         // Make stats
-        int listSize = processList.getList().size();
+        int listSize = allList.size();
         this.statistic = new Statistic(
                 listSize,
                 changeContent,
                 executionTime,
                 breakTime,
-                listSize > 0 ? summaryWaitingTime / listSize : null,
+                listSize > 0 ? (int)(summaryWaitingTime / listSize) : null,
                 maxWaitingTime
         );
     }

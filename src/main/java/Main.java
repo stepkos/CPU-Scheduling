@@ -11,9 +11,9 @@ public class Main {
     public static void main(String[] args) {
 
         List<ExecutableWithStatistic> algorithms = Arrays.asList(
-                new FCFS(new ProcessList(2000, 123)),
-                new SJF(new ProcessList(2000, 123)),
-                new RR(new ProcessList(2000, 123), 12)
+                new FCFS(new ProcessList(20000, 321)),
+                new SJF(new ProcessList(20000, 321)),
+                new RR(new ProcessList(20000, 321), 12)
         );
 
         algorithms.forEach(algorithm ->  {

@@ -25,7 +25,7 @@ public class ProcessList {
 
         for (int i=1; i<=amount; i++)
             processList.add(new Process(i,
-                    rand.nextInt(1, 15000),
+                    rand.nextInt(1, 150000),
                     rand.nextInt(1, 20)
             ));
     }

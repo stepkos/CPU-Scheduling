@@ -12,7 +12,7 @@ public class FCFS implements ExecutableWithStatistic {
     private Statistic statistic = null;
     private int executionTime = 0;
     private int breakTime = 0;
-    private int summaryWaitingTime = 0;
+    private long summaryWaitingTime = 0;
     private int maxWaitingTime = 0;
 
     public FCFS(ProcessList processList) {
@@ -41,7 +41,7 @@ public class FCFS implements ExecutableWithStatistic {
                 listSize,
                 executionTime,
                 breakTime,
-                listSize > 0 ? summaryWaitingTime / listSize : null,
+                listSize > 0 ? (int)(summaryWaitingTime / listSize) : null,
                 maxWaitingTime
         );
     }
