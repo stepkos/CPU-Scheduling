@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30c2f282-be31-46c1-b999-1059cd292848" name="Changes" comment="Debug and optimize">
+    <list default="true" id="30c2f282-be31-46c1-b999-1059cd292848" name="Changes" comment="Add avg waiting time for first action on process">
+      <change afterPath="$PROJECT_DIR$/src/main/java/process/ProcessesGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/algorithms/FCFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/FCFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/algorithms/RR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/RR.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/algorithms/SJF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/SJF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/process/ProcessList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/process/ProcessList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/statistics/Statistic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/statistics/Statistic.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -85,7 +84,7 @@
       <workItem from="1679407759093" duration="44000" />
       <workItem from="1679407816350" duration="216000" />
       <workItem from="1679408051641" duration="47000" />
-      <workItem from="1679408113324" duration="4225000" />
+      <workItem from="1679408113324" duration="5837000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1678925895631</created>
@@ -171,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679436447411</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add avg waiting time for first action on process">
+      <created>1679438277162</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1679438277162</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +207,8 @@
     <MESSAGE value="Add RR (Round Rabin) little spaghetti code" />
     <MESSAGE value="Refactor - add ExecutableWithStatistic interface" />
     <MESSAGE value="Debug and optimize" />
-    <option name="LAST_COMMIT_MESSAGE" value="Debug and optimize" />
+    <MESSAGE value="Add avg waiting time for first action on process" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add avg waiting time for first action on process" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

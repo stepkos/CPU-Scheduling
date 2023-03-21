@@ -1,33 +1,13 @@
 package process;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Random;
 
 public class ProcessList {
-    private List<Process> processList = new ArrayList<>();
-
-    public ProcessList(int amount) {
-        generateProcesses(amount, System.currentTimeMillis());
-    }
-
-    public ProcessList(int amount, long seed) {
-        generateProcesses(amount, seed);
-    }
+    private final List<Process> processList;
 
     public ProcessList(List<Process> processList) {
         this.processList = processList;
-    }
-
-    private void generateProcesses(int amount, long seed) {
-        Random rand = new Random(seed);
-
-        for (int i=1; i<=amount; i++)
-            processList.add(new Process(i,
-                    rand.nextInt(1, 150000),
-                    rand.nextInt(1, 20)
-            ));
     }
 
     public List<Process> getList() {
