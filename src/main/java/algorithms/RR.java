@@ -2,27 +2,33 @@ package algorithms;
 
 import process.Process;
 import process.ProcessList;
+import statistics.Statistic;
 
 import java.util.Comparator;
 import java.util.List;
 
-public class RR {
+public class RR implements ExecutableWithStatistic {
     private final ProcessList processList;
+    private Statistic statistic = null;
+    private final int quantum;
     private int executionTime = 0;
     private int breakTime = 0;
     private int summaryWaitingTime = 0;
     private int maxWaitingTime = 0;
     private int changeContent = 0;
 
-    public RR(ProcessList processList) {
+    public RR(ProcessList processList, int quantum) {
         this.processList = processList;
         this.processList.sort(Comparator.comparingInt(Process::getArrivalTime));
+        this.quantum = quantum;
     }
 
-    public void execute(int k) {
+    @Override
+    public void execute() {
         List<Process> allList = processList.getList();
-        int i = 0;
         Process lastProcess = null;
+        int i = 0;
+
         while (!processList.isDone()) {
             if (processList.getExistsAndNotDoneList(executionTime + breakTime).isEmpty())
                 breakTime++;
@@ -40,11 +46,10 @@ public class RR {
                         changeContent++;
                     }
 
-                    int timeToExecute = Math.min(currentProcess.getTimeLeft(), k);
+                    int timeToExecute = Math.min(currentProcess.getTimeLeft(), quantum);
                     currentProcess.execute(timeToExecute);
                     executionTime += timeToExecute;
 
-                    // TODO Debug summaryWaitingTime for spec list
                     if (currentProcess.isDone()) {
                         int waitingTime = executionTime + breakTime - timeToExecute - currentProcess.getArrivalTime();
                         if (waitingTime > maxWaitingTime) maxWaitingTime = waitingTime;
@@ -55,16 +60,23 @@ public class RR {
             }
         }
 
-        // Temporary stats
+        // Make stats
         int listSize = processList.getList().size();
-        System.out.println("STATS FOR FCFS");
-        System.out.println("Process amount: " + listSize);
-        System.out.println("Change content amount: " + changeContent);
-        System.out.println("Execution time: " + executionTime);
-        System.out.println("Break time: " + breakTime);
-        System.out.println("Avg waiting time: " + (listSize > 0 ? summaryWaitingTime / listSize : "No processes"));
-        System.out.println("Max waiting time: " + maxWaitingTime);
-        System.out.println();
+        this.statistic = new Statistic(
+                listSize,
+                changeContent,
+                executionTime,
+                breakTime,
+                listSize > 0 ? summaryWaitingTime / listSize : null,
+                maxWaitingTime
+        );
+    }
+
+    @Override
+    public Statistic getStatistic() {
+        if (statistic == null)
+            throw new UnsupportedOperationException("You have to execute algorithm first");
+        return statistic;
     }
 
 }

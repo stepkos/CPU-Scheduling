@@ -2,12 +2,14 @@ package algorithms;
 
 import process.Process;
 import process.ProcessList;
+import statistics.Statistic;
 
 import java.util.Comparator;
 import java.util.List;
 
-public class FCFS {
+public class FCFS implements ExecutableWithStatistic {
     private final ProcessList processList;
+    private Statistic statistic = null;
     private int executionTime = 0;
     private int breakTime = 0;
     private int summaryWaitingTime = 0;
@@ -18,13 +20,13 @@ public class FCFS {
         this.processList.sort(Comparator.comparingInt(Process::getArrivalTime));
     }
 
+    @Override
     public void execute() {
         while (!processList.isDone()) {
             List<Process> actualList = processList.getExistsAndNotDoneList(executionTime + breakTime);
             if (actualList.isEmpty())
                 breakTime++;
             else {
-                // TODO Debug summaryWaitingTime for spec list
                 int waitingTime = executionTime + breakTime - actualList.get(0).getArrivalTime();
                 if (waitingTime > maxWaitingTime) maxWaitingTime = waitingTime;
                 summaryWaitingTime += waitingTime;
@@ -32,16 +34,23 @@ public class FCFS {
             }
         }
 
-        // Temporary stats
+        // Make stats
         int listSize = processList.getList().size();
-        System.out.println("STATS FOR FCFS");
-        System.out.println("Process amount: " + listSize);
-        System.out.println("Change content amount: " + listSize);
-        System.out.println("Execution time: " + executionTime);
-        System.out.println("Break time: " + breakTime);
-        System.out.println("Avg waiting time: " + (listSize > 0 ? summaryWaitingTime / listSize : "No processes"));
-        System.out.println("Max waiting time: " + maxWaitingTime);
-        System.out.println();
+        this.statistic = new Statistic(
+                listSize,
+                listSize,
+                executionTime,
+                breakTime,
+                listSize > 0 ? summaryWaitingTime / listSize : null,
+                maxWaitingTime
+        );
+    }
+
+    @Override
+    public Statistic getStatistic() {
+        if (statistic == null)
+            throw new UnsupportedOperationException("You have to execute algorithm first");
+        return statistic;
     }
 
 }

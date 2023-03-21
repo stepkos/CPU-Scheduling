@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30c2f282-be31-46c1-b999-1059cd292848" name="Changes" comment="Add RR (Round Rabin) little spaghetti code">
-      <change afterPath="$PROJECT_DIR$/src/main/java/algorithms/RR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/algorithms/ExecutableWithStatistic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/statistics/Statistic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/algorithms/FCFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/FCFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/algorithms/RR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/RR.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/algorithms/SJF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/SJF.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -45,22 +48,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -78,7 +82,11 @@
       <option name="presentableId" value="Default" />
       <updated>1678925695600</updated>
       <workItem from="1678925696459" duration="4265000" />
-      <workItem from="1679166347984" duration="19638000" />
+      <workItem from="1679166347984" duration="26237000" />
+      <workItem from="1679407759093" duration="44000" />
+      <workItem from="1679407816350" duration="216000" />
+      <workItem from="1679408051641" duration="47000" />
+      <workItem from="1679408113324" duration="1498000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1678925895631</created>
@@ -143,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679300274704</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add RR (Round Rabin) little spaghetti code">
+      <created>1679304948270</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1679304948270</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,5 +176,9 @@
     <MESSAGE value="SJF - only another comparator than FCFS" />
     <MESSAGE value="Add RR (Round Rabin) little spaghetti code" />
     <option name="LAST_COMMIT_MESSAGE" value="Add RR (Round Rabin) little spaghetti code" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
