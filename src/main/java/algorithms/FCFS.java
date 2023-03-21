@@ -42,7 +42,8 @@ public class FCFS implements ExecutableWithStatistic {
                 executionTime,
                 breakTime,
                 listSize > 0 ? (int)(summaryWaitingTime / listSize) : null,
-                maxWaitingTime
+                maxWaitingTime,
+                listSize > 0 ? (int)(summaryWaitingTime / listSize) : null
         );
     }
 

@@ -22,8 +22,6 @@ public class Main {
         });
 
 
-        // TODO ide czasu do rozpoczecia lub od statniego wykonania
-
         // TODO stasystyki o liscie procesow
         // - jaka srednia dlugosc
         // - ile srednich, krotkich, dlugich

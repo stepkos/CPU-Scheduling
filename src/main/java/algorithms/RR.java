@@ -14,6 +14,7 @@ public class RR implements ExecutableWithStatistic {
     private int executionTime = 0;
     private int breakTime = 0;
     private long summaryWaitingTime = 0;
+    private long summaryWaitingForFirstActionTime = 0;
     private int maxWaitingTime = 0;
     private int changeContent = 0;
 
@@ -46,6 +47,9 @@ public class RR implements ExecutableWithStatistic {
                         changeContent++;
                     }
 
+                    if (currentProcess.getTimeLeft() == currentProcess.getTotalTime())
+                        summaryWaitingForFirstActionTime += executionTime + breakTime - currentProcess.getArrivalTime();
+
                     int timeToExecute = Math.min(currentProcess.getTimeLeft(), quantum);
                     currentProcess.execute(timeToExecute);
                     executionTime += timeToExecute;
@@ -68,7 +72,8 @@ public class RR implements ExecutableWithStatistic {
                 executionTime,
                 breakTime,
                 listSize > 0 ? (int)(summaryWaitingTime / listSize) : null,
-                maxWaitingTime
+                maxWaitingTime,
+                listSize > 0 ? (int)(summaryWaitingForFirstActionTime / listSize) : null
         );
     }
 
