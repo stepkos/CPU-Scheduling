@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30c2f282-be31-46c1-b999-1059cd292848" name="Changes" comment="Refactor StatisticPresenter">
+    <list default="true" id="30c2f282-be31-46c1-b999-1059cd292848" name="Changes" comment="Add algorithm name in stats">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/algorithms/FCFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/FCFS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/algorithms/RR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/RR.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/algorithms/SJF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/SJF.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/statistics/Statistic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/statistics/Statistic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/statistics/StatisticPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/statistics/StatisticPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/process/ProcessesGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/process/ProcessesGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +94,7 @@
       <workItem from="1679407759093" duration="44000" />
       <workItem from="1679407816350" duration="216000" />
       <workItem from="1679408051641" duration="47000" />
-      <workItem from="1679408113324" duration="20594000" />
+      <workItem from="1679408113324" duration="23888000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1678925895631</created>
@@ -229,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679521634141</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Add algorithm name in stats">
+      <created>1679522126692</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1679522126692</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,7 +273,8 @@
     <MESSAGE value="Add StatisticPresenter" />
     <MESSAGE value="Optimize FCFS and SJF" />
     <MESSAGE value="Refactor StatisticPresenter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor StatisticPresenter" />
+    <MESSAGE value="Add algorithm name in stats" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add algorithm name in stats" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

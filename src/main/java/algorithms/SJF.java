@@ -37,12 +37,8 @@ public class SJF implements ExecutableWithStatistic {
         }
 
         // Make stats
-        this.statistic = new Statistic(
-                "SJF",
-                listSize,
-                listSize,
-                executionTime,
-                breakTime,
+        this.statistic = new Statistic("SJF",
+                listSize, listSize, executionTime, breakTime,
                 listSize > 0 ? (int)(summaryWaitingTime / listSize) : null,
                 maxWaitingTime,
                 listSize > 0 ? (int)(summaryWaitingTime / listSize) : null

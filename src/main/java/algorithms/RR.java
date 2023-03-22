@@ -66,12 +66,8 @@ public class RR implements ExecutableWithStatistic {
 
         // Make stats
         int listSize = allList.size();
-        this.statistic = new Statistic(
-                "RR",
-                listSize,
-                changeContent,
-                executionTime,
-                breakTime,
+        this.statistic = new Statistic("RR",
+                listSize, changeContent, executionTime, breakTime,
                 listSize > 0 ? (int)(summaryWaitingTime / listSize) : null,
                 maxWaitingTime,
                 listSize > 0 ? (int)(summaryWaitingForFirstActionTime / listSize) : null
