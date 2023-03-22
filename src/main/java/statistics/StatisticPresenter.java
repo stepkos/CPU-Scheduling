@@ -27,8 +27,7 @@ public class StatisticPresenter {
     }
 
     public void demo() {
-//        long seed = System.currentTimeMillis();
-        long seed = 1111;
+        long seed = System.currentTimeMillis();
 
         ProcessesGenerator processesGenerator = new ProcessesGenerator(maxArrivalTime, minProcessLength, maxProcessLength);
         List<ExecutableWithStatistic> algorithms = Arrays.asList(
@@ -37,17 +36,38 @@ public class StatisticPresenter {
                 new RR(processesGenerator.generateProcessList(amountOfProcesses, seed), quantumOfTimeForRR)
         );
 
-        System.out.println("| -------------------------------------------------------------------------------------------------------------------------------- |");
-        System.out.println("| processAmount | changeContentAmount | executionTime | breakTime | avgWaitingTime | maxWaitingTime | avgWaitingForFirstActionTime |");
+        printClassSettings();
+        printTableLine();
+        printTableHead();
 
         algorithms.forEach(algorithm ->  {
             algorithm.execute();
-            Statistic stats = algorithm.getStatistic();
-            System.out.printf("| %13d | %19d | %13d | %9d | %14d | %14d | %28d |\n",
-                    stats.processAmount(), stats.changeContentAmount(), stats.executionTime(), stats.breakTime(), stats.avgWaitingTime(), stats.maxWaitingTime(), stats.avgWaitingForFirstActionTime());
+            printTableRow(algorithm.getStatistic());
         });
 
-        System.out.println("| -------------------------------------------------------------------------------------------------------------------------------- |\n");
+        printTableLine();
+    }
+
+    private void printClassSettings() {
+        System.out.printf("Amount of processes: %d\n", amountOfProcesses);
+        System.out.printf("Arrival time range <1, %d>\n", maxArrivalTime);
+        System.out.printf("Processes length range <%d, %d>\n", minProcessLength, maxProcessLength);
+        System.out.println("Quantum of time for RR (Round Rabin): " + quantumOfTimeForRR);
+
+    }
+
+    private void printTableLine() {
+        System.out.println("| -------------------------------------------------------------------------------------------------------------------------------- |");
+    }
+
+    private void printTableHead() {
+        System.out.println("| processAmount | changeContentAmount | executionTime | breakTime | avgWaitingTime | maxWaitingTime | avgWaitingForFirstActionTime |");
+    }
+
+    private void printTableRow(Statistic stats) {
+        System.out.printf("| %13d | %19d | %13d | %9d | %14d | %14d | %28d |\n",
+                stats.processAmount(), stats.changeContentAmount(), stats.executionTime(), stats.breakTime(), stats.avgWaitingTime(), stats.maxWaitingTime(), stats.avgWaitingForFirstActionTime());
+
     }
 
     public int getAmountOfProcesses() {

@@ -1,13 +1,4 @@
-import algorithms.ExecutableWithStatistic;
-import algorithms.FCFS;
-import algorithms.RR;
-import algorithms.SJF;
-import process.ProcessList;
-import process.ProcessesGenerator;
 import statistics.StatisticPresenter;
-
-import java.util.Arrays;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,10 +14,6 @@ public class Main {
 //            algorithm.execute();
 //            System.out.println(algorithm.getStatistic());
 //        });
-
-
-//        ProcessesGenerator pg = new ProcessesGenerator(150, 1, 20);
-//        pg.generateProcessList(10, 555).printAll();
 
 
         new StatisticPresenter().demo();
