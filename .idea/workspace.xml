@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30c2f282-be31-46c1-b999-1059cd292848" name="Changes" comment="Add algorithm name in stats">
+    <list default="true" id="30c2f282-be31-46c1-b999-1059cd292848" name="Changes" comment="Add custom probability distribution">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/algorithms/FCFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/FCFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/algorithms/RR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/RR.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/algorithms/SJF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/SJF.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/process/ProcessesGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/process/ProcessesGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/statistics/StatisticPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/statistics/StatisticPresenter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +91,7 @@
       <workItem from="1679407759093" duration="44000" />
       <workItem from="1679407816350" duration="216000" />
       <workItem from="1679408051641" duration="47000" />
-      <workItem from="1679408113324" duration="23888000" />
+      <workItem from="1679408113324" duration="25077000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1678925895631</created>
@@ -236,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679522126692</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Add custom probability distribution">
+      <created>1679525407849</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1679525407849</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +278,8 @@
     <MESSAGE value="Optimize FCFS and SJF" />
     <MESSAGE value="Refactor StatisticPresenter" />
     <MESSAGE value="Add algorithm name in stats" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add algorithm name in stats" />
+    <MESSAGE value="Add custom probability distribution" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add custom probability distribution" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

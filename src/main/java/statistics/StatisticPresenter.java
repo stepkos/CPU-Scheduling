@@ -52,8 +52,11 @@ public class StatisticPresenter {
         System.out.printf("Amount of processes: %d\n", amountOfProcesses);
         System.out.printf("Arrival time range <1, %d>\n", maxArrivalTime);
         System.out.printf("Processes length range <%d, %d>\n", minProcessLength, maxProcessLength);
+        System.out.printf("Probability distribution: Short<%d, %d> 30%% | Medium<%d, %d> 60%% | Long<%d, %d> 10%%\n",
+                minProcessLength, minProcessLength + maxProcessLength/3,
+                minProcessLength + maxProcessLength/3 + 1, minProcessLength + (maxProcessLength/3)*2,
+                minProcessLength + (maxProcessLength/3)*2 + 1, maxProcessLength);
         System.out.println("Quantum of time for RR (Round Rabin): " + quantumOfTimeForRR);
-
     }
 
     private void printTableLine() {

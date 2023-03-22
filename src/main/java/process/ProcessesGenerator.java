@@ -8,8 +8,8 @@ public class ProcessesGenerator {
     private final int maxArrivalTime;
     private final int minProcessLength;
     private final int maxProcessLength;
-    private int shortProcessLimit = 30;
-    private int mediumProcessLimit = 90;
+    private int shortProcessPercent = 30;
+    private int mediumProcessPercent = 60;
 
     public ProcessesGenerator(int maxArrivalTime, int minProcessLength, int maxProcessLength) {
         this.maxArrivalTime = maxArrivalTime;
@@ -17,12 +17,12 @@ public class ProcessesGenerator {
         this.maxProcessLength = maxProcessLength;
     }
 
-    public void setProcessLengthRatioLimits(int shortProcessLimit, int mediumProcessLimit) {
-        if (shortProcessLimit > mediumProcessLimit && shortProcessLimit + mediumProcessLimit > 100)
+    public void setProcessLengthRatio(int shortProcessPercent, int mediumProcessPercent) {
+        if (shortProcessPercent + mediumProcessPercent > 100)
             throw new UnsupportedOperationException("Invalid argument");
 
-        this.shortProcessLimit = shortProcessLimit;
-        this.mediumProcessLimit = mediumProcessLimit;
+        this.shortProcessPercent = shortProcessPercent;
+        this.mediumProcessPercent = mediumProcessPercent;
     }
 
     public List<Process> generateList(int amount, long seed) {
@@ -33,9 +33,9 @@ public class ProcessesGenerator {
             int randLengthRange = rand.nextInt(1, 100);
             int processLength;
 
-            if (randLengthRange <= shortProcessLimit)
+            if (randLengthRange <= shortProcessPercent)
                 processLength = rand.nextInt(minProcessLength, minProcessLength + maxProcessLength/3);
-            else if (randLengthRange <= mediumProcessLimit)
+            else if (randLengthRange <= shortProcessPercent + mediumProcessPercent)
                 processLength = rand.nextInt(minProcessLength + maxProcessLength/3 + 1, minProcessLength + (maxProcessLength/3)*2);
             else
                 processLength = rand.nextInt(minProcessLength + (maxProcessLength/3)*2 + 1, maxProcessLength);
