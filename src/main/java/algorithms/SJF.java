@@ -38,6 +38,7 @@ public class SJF implements ExecutableWithStatistic {
 
         // Make stats
         this.statistic = new Statistic(
+                "SJF",
                 listSize,
                 listSize,
                 executionTime,

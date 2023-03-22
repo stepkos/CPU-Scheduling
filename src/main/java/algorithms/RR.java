@@ -67,6 +67,7 @@ public class RR implements ExecutableWithStatistic {
         // Make stats
         int listSize = allList.size();
         this.statistic = new Statistic(
+                "RR",
                 listSize,
                 changeContent,
                 executionTime,

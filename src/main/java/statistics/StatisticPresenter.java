@@ -57,16 +57,16 @@ public class StatisticPresenter {
     }
 
     private void printTableLine() {
-        System.out.println("| -------------------------------------------------------------------------------------------------------------------------------- |");
+        System.out.println("| -------------------------------------------------------------------------------------------------------------------------------------------- |");
     }
 
     private void printTableHead() {
-        System.out.println("| processAmount | changeContentAmount | executionTime | breakTime | avgWaitingTime | maxWaitingTime | avgWaitingForFirstActionTime |");
+        System.out.println("| algorithm | processAmount | changeContentAmount | executionTime | breakTime | avgWaitingTime | maxWaitingTime | avgWaitingForFirstActionTime |");
     }
 
     private void printTableRow(Statistic stats) {
-        System.out.printf("| %13d | %19d | %13d | %9d | %14d | %14d | %28d |\n",
-                stats.processAmount(), stats.changeContentAmount(), stats.executionTime(), stats.breakTime(), stats.avgWaitingTime(), stats.maxWaitingTime(), stats.avgWaitingForFirstActionTime());
+        System.out.printf("| %9s | %13d | %19d | %13d | %9d | %14d | %14d | %28d |\n",
+                stats.name(), stats.processAmount(), stats.changeContentAmount(), stats.executionTime(), stats.breakTime(), stats.avgWaitingTime(), stats.maxWaitingTime(), stats.avgWaitingForFirstActionTime());
 
     }
 

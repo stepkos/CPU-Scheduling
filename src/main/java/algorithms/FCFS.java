@@ -39,6 +39,7 @@ public class FCFS implements ExecutableWithStatistic {
 
         // Make stats
         this.statistic = new Statistic(
+                "FCFS",
                 listSize,
                 listSize,
                 executionTime,
