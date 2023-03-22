@@ -4,6 +4,7 @@ import algorithms.RR;
 import algorithms.SJF;
 import process.ProcessList;
 import process.ProcessesGenerator;
+import statistics.StatisticPresenter;
 
 import java.util.Arrays;
 import java.util.List;
@@ -24,9 +25,11 @@ public class Main {
 //        });
 
 
-        ProcessesGenerator pg = new ProcessesGenerator(150, 1, 20);
-        pg.generateProcessList(10, 555).printAll();
+//        ProcessesGenerator pg = new ProcessesGenerator(150, 1, 20);
+//        pg.generateProcessList(10, 555).printAll();
 
+
+        new StatisticPresenter().demo();
 
         // TODO stasystyki o liscie procesow
         // - jaka srednia dlugosc

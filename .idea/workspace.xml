@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30c2f282-be31-46c1-b999-1059cd292848" name="Changes" comment="Add ProcessesGenerator">
+    <list default="true" id="30c2f282-be31-46c1-b999-1059cd292848" name="Changes" comment="Remove minArrivalTime">
+      <change afterPath="$PROJECT_DIR$/src/main/java/statistics/StatisticPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/process/ProcessesGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/process/ProcessesGenerator.java" afterDir="false" />
@@ -69,6 +70,15 @@
       <recent name="algorithms" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="untitled" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -82,7 +92,7 @@
       <workItem from="1679407759093" duration="44000" />
       <workItem from="1679407816350" duration="216000" />
       <workItem from="1679408051641" duration="47000" />
-      <workItem from="1679408113324" duration="7522000" />
+      <workItem from="1679408113324" duration="13425000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1678925895631</created>
@@ -189,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679439910905</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Remove minArrivalTime">
+      <created>1679490301789</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1679490301789</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +239,8 @@
     <MESSAGE value="Add avg waiting time for first action on process" />
     <MESSAGE value="Convert Statistic to record and" />
     <MESSAGE value="Add ProcessesGenerator" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add ProcessesGenerator" />
+    <MESSAGE value="Remove minArrivalTime" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove minArrivalTime" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

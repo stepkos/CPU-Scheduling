@@ -5,21 +5,20 @@ import java.util.List;
 import java.util.Random;
 
 public class ProcessesGenerator {
-
     private final int maxArrivalTime;
-    private final int minTotalTime;
-    private final int maxTotalTime;
+    private final int minProcessLength;
+    private final int maxProcessLength;
 
     public ProcessesGenerator() {
         maxArrivalTime = 15000;
-        minTotalTime = 1;
-        maxTotalTime = 20;
+        minProcessLength = 1;
+        maxProcessLength = 20;
     }
 
-    public ProcessesGenerator(int maxArrivalTime, int minTotalTime, int maxTotalTime) {
+    public ProcessesGenerator(int maxArrivalTime, int minProcessLength, int maxProcessLength) {
         this.maxArrivalTime = maxArrivalTime;
-        this.minTotalTime = minTotalTime;
-        this.maxTotalTime = maxTotalTime;
+        this.minProcessLength = minProcessLength;
+        this.maxProcessLength = maxProcessLength;
     }
 
     public List<Process> generateList(int amount, long seed) {
@@ -29,7 +28,7 @@ public class ProcessesGenerator {
         for (int i=1; i<=amount; i++)
             processList.add(new Process(i,
                     rand.nextInt(0, maxArrivalTime),
-                    rand.nextInt(minTotalTime, maxTotalTime)
+                    rand.nextInt(minProcessLength, maxProcessLength)
             ));
 
         return  processList;
