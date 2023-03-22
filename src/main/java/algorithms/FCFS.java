@@ -9,6 +9,7 @@ import java.util.List;
 
 public class FCFS implements ExecutableWithStatistic {
     private final ProcessList processList;
+    private final int listSize;
     private Statistic statistic = null;
     private int executionTime = 0;
     private int breakTime = 0;
@@ -18,6 +19,7 @@ public class FCFS implements ExecutableWithStatistic {
     public FCFS(ProcessList processList) {
         this.processList = processList;
         this.processList.sort(Comparator.comparingInt(Process::getArrivalTime));
+        listSize = processList.getList().size();
     }
 
     @Override
@@ -31,11 +33,11 @@ public class FCFS implements ExecutableWithStatistic {
                 if (waitingTime > maxWaitingTime) maxWaitingTime = waitingTime;
                 summaryWaitingTime += waitingTime;
                 executionTime += actualList.get(0).execute();
+                processList.getList().remove(actualList.get(0));
             }
         }
 
         // Make stats
-        int listSize = processList.getList().size();
         this.statistic = new Statistic(
                 listSize,
                 listSize,

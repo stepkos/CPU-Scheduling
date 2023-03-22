@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30c2f282-be31-46c1-b999-1059cd292848" name="Changes" comment="Remove minArrivalTime">
-      <change afterPath="$PROJECT_DIR$/src/main/java/statistics/StatisticPresenter.java" afterDir="false" />
+    <list default="true" id="30c2f282-be31-46c1-b999-1059cd292848" name="Changes" comment="Add StatisticPresenter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/process/ProcessesGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/process/ProcessesGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/algorithms/FCFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/FCFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/algorithms/SJF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/SJF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/statistics/StatisticPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/statistics/StatisticPresenter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +92,7 @@
       <workItem from="1679407759093" duration="44000" />
       <workItem from="1679407816350" duration="216000" />
       <workItem from="1679408051641" duration="47000" />
-      <workItem from="1679408113324" duration="13425000" />
+      <workItem from="1679408113324" duration="17411000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1678925895631</created>
@@ -206,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679490301789</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add StatisticPresenter">
+      <created>1679506008910</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1679506008910</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +247,8 @@
     <MESSAGE value="Convert Statistic to record and" />
     <MESSAGE value="Add ProcessesGenerator" />
     <MESSAGE value="Remove minArrivalTime" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove minArrivalTime" />
+    <MESSAGE value="Add StatisticPresenter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add StatisticPresenter" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

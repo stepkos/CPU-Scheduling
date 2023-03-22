@@ -9,6 +9,7 @@ import java.util.List;
 
 public class SJF implements ExecutableWithStatistic {
     private final ProcessList processList;
+    private final int listSize;
     private Statistic statistic = null;
     private int executionTime = 0;
     private int breakTime = 0;
@@ -18,6 +19,7 @@ public class SJF implements ExecutableWithStatistic {
     public SJF(ProcessList processList) {
         this.processList = processList;
         this.processList.sort(Comparator.comparingInt(Process::getTotalTime));
+        listSize = processList.getList().size();
     }
 
     public void execute() {
@@ -30,11 +32,11 @@ public class SJF implements ExecutableWithStatistic {
                 if (waitingTime > maxWaitingTime) maxWaitingTime = waitingTime;
                 summaryWaitingTime += waitingTime;
                 executionTime += actualList.get(0).execute();
+                processList.getList().remove(actualList.get(0));
             }
         }
 
         // Make stats
-        int listSize = processList.getList().size();
         this.statistic = new Statistic(
                 listSize,
                 listSize,

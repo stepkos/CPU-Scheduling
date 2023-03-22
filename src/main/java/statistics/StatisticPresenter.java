@@ -10,9 +10,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class StatisticPresenter {
-    private int amountOfProcesses = 2000;
+    private int amountOfProcesses = 20000;
     private int quantumOfTimeForRR = 12;
-    private int maxArrivalTime = 15000;
+    private int maxArrivalTime = 150000;
     private int minProcessLength = 1;
     private int maxProcessLength = 20;
 
@@ -27,7 +27,8 @@ public class StatisticPresenter {
     }
 
     public void demo() {
-        long seed = System.currentTimeMillis();
+//        long seed = System.currentTimeMillis();
+        long seed = 1111;
 
         ProcessesGenerator processesGenerator = new ProcessesGenerator(maxArrivalTime, minProcessLength, maxProcessLength);
         List<ExecutableWithStatistic> algorithms = Arrays.asList(
