@@ -6,20 +6,17 @@ import java.util.Random;
 
 public class ProcessesGenerator {
 
-    private final int minArrivalTime;
     private final int maxArrivalTime;
     private final int minTotalTime;
     private final int maxTotalTime;
 
     public ProcessesGenerator() {
-        minArrivalTime = 1;
         maxArrivalTime = 15000;
         minTotalTime = 1;
         maxTotalTime = 20;
     }
 
-    public ProcessesGenerator(int minArrivalTime, int maxArrivalTime, int minTotalTime, int maxTotalTime) {
-        this.minArrivalTime = minArrivalTime;
+    public ProcessesGenerator(int maxArrivalTime, int minTotalTime, int maxTotalTime) {
         this.maxArrivalTime = maxArrivalTime;
         this.minTotalTime = minTotalTime;
         this.maxTotalTime = maxTotalTime;
@@ -31,7 +28,7 @@ public class ProcessesGenerator {
 
         for (int i=1; i<=amount; i++)
             processList.add(new Process(i,
-                    rand.nextInt(minArrivalTime, maxArrivalTime),
+                    rand.nextInt(0, maxArrivalTime),
                     rand.nextInt(minTotalTime, maxTotalTime)
             ));
 

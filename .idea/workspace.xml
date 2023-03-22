@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30c2f282-be31-46c1-b999-1059cd292848" name="Changes" comment="Add avg waiting time for first action on process">
-      <change afterPath="$PROJECT_DIR$/src/main/java/process/ProcessesGenerator.java" afterDir="false" />
+    <list default="true" id="30c2f282-be31-46c1-b999-1059cd292848" name="Changes" comment="Add ProcessesGenerator">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/process/ProcessList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/process/ProcessList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/statistics/Statistic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/statistics/Statistic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/process/ProcessesGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/process/ProcessesGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +82,7 @@
       <workItem from="1679407759093" duration="44000" />
       <workItem from="1679407816350" duration="216000" />
       <workItem from="1679408051641" duration="47000" />
-      <workItem from="1679408113324" duration="5837000" />
+      <workItem from="1679408113324" duration="7522000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1678925895631</created>
@@ -177,7 +175,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679438277162</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Convert Statistic to record and">
+      <created>1679439891672</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1679439891672</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add ProcessesGenerator">
+      <created>1679439910905</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1679439910905</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +220,9 @@
     <MESSAGE value="Refactor - add ExecutableWithStatistic interface" />
     <MESSAGE value="Debug and optimize" />
     <MESSAGE value="Add avg waiting time for first action on process" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add avg waiting time for first action on process" />
+    <MESSAGE value="Convert Statistic to record and" />
+    <MESSAGE value="Add ProcessesGenerator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add ProcessesGenerator" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
