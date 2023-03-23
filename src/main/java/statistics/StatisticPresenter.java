@@ -15,15 +15,17 @@ public class StatisticPresenter {
     private int maxArrivalTime = 150000;
     private int minProcessLength = 1;
     private int maxProcessLength = 20;
+    private int hungerLevel = 100000;
 
     public StatisticPresenter() { }
 
-    public StatisticPresenter(int amountOfProcesses, int quantumOfTimeForRR, int maxArrivalTime, int minProcessLength, int maxProcessLength) {
+    public StatisticPresenter(int amountOfProcesses, int quantumOfTimeForRR, int maxArrivalTime, int minProcessLength, int maxProcessLength, int hungerLevel) {
         this.amountOfProcesses = amountOfProcesses;
         this.quantumOfTimeForRR = quantumOfTimeForRR;
         this.maxArrivalTime = maxArrivalTime;
         this.minProcessLength = minProcessLength;
         this.maxProcessLength = maxProcessLength;
+        this.hungerLevel = hungerLevel;
     }
 
     public void demo() {
@@ -31,9 +33,9 @@ public class StatisticPresenter {
 
         ProcessesGenerator processesGenerator = new ProcessesGenerator(maxArrivalTime, minProcessLength, maxProcessLength);
         List<ExecutableWithStatistic> algorithms = Arrays.asList(
-                new FCFS(processesGenerator.generateProcessList(amountOfProcesses, seed)),
-                new SJF(processesGenerator.generateProcessList(amountOfProcesses, seed)),
-                new RR(processesGenerator.generateProcessList(amountOfProcesses, seed), quantumOfTimeForRR)
+                new FCFS(processesGenerator.generateProcessList(amountOfProcesses, seed), hungerLevel),
+                new SJF(processesGenerator.generateProcessList(amountOfProcesses, seed), hungerLevel),
+                new RR(processesGenerator.generateProcessList(amountOfProcesses, seed), hungerLevel, quantumOfTimeForRR)
         );
 
         printClassSettings();
@@ -57,19 +59,20 @@ public class StatisticPresenter {
                 minProcessLength + maxProcessLength/3 + 1, minProcessLength + (maxProcessLength/3)*2,
                 minProcessLength + (maxProcessLength/3)*2 + 1, maxProcessLength);
         System.out.println("Quantum of time for RR (Round Rabin): " + quantumOfTimeForRR);
+        System.out.println("Hunger level: " + hungerLevel);
     }
 
     private void printTableLine() {
-        System.out.println("| -------------------------------------------------------------------------------------------------------------------------------------------- |");
+        System.out.println("| ------------------------------------------------------------------------------------------------------------------------------------------------------------ |");
     }
 
     private void printTableHead() {
-        System.out.println("| algorithm | processAmount | changeContentAmount | executionTime | breakTime | avgWaitingTime | maxWaitingTime | avgWaitingForFirstActionTime |");
+        System.out.println("| algorithm | processAmount | changeContentAmount | executionTime | breakTime | avgWaitingTime | maxWaitingTime | starvedAmount | avgWaitingForFirstActionTime |");
     }
 
     private void printTableRow(Statistic stats) {
-        System.out.printf("| %9s | %13d | %19d | %13d | %9d | %14d | %14d | %28d |\n",
-                stats.name(), stats.processAmount(), stats.changeContentAmount(), stats.executionTime(), stats.breakTime(), stats.avgWaitingTime(), stats.maxWaitingTime(), stats.avgWaitingForFirstActionTime());
+        System.out.printf("| %9s | %13d | %19d | %13d | %9d | %14d | %14d | %13d | %28d |\n",
+                stats.name(), stats.processAmount(), stats.changeContentAmount(), stats.executionTime(), stats.breakTime(), stats.avgWaitingTime(), stats.maxWaitingTime(), stats.starvedProcesses(), stats.avgWaitingForFirstActionTime());
 
     }
 
@@ -111,6 +114,14 @@ public class StatisticPresenter {
 
     public void setMaxProcessLength(int maxProcessLength) {
         this.maxProcessLength = maxProcessLength;
+    }
+
+    public int getHungerLevel() {
+        return hungerLevel;
+    }
+
+    public void setHungerLevel(int hungerLevel) {
+        this.hungerLevel = hungerLevel;
     }
 
 }

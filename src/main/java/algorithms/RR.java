@@ -10,6 +10,7 @@ import java.util.List;
 public class RR implements ExecutableWithStatistic {
     private final ProcessList processList;
     private Statistic statistic = null;
+    private final int hungerLevel;
     private final int quantum;
     private int executionTime = 0;
     private int breakTime = 0;
@@ -17,11 +18,13 @@ public class RR implements ExecutableWithStatistic {
     private long summaryWaitingForFirstActionTime = 0;
     private int maxWaitingTime = 0;
     private int changeContent = 0;
+    private int starvedProcesses = 0;
 
-    public RR(ProcessList processList, int quantum) {
+    public RR(ProcessList processList, int hungerLevel, int quantum) {
+        this.quantum = quantum;
+        this.hungerLevel = hungerLevel;
         this.processList = processList;
         this.processList.sort(Comparator.comparingInt(Process::getArrivalTime));
-        this.quantum = quantum;
     }
 
     @Override
@@ -51,13 +54,18 @@ public class RR implements ExecutableWithStatistic {
                         summaryWaitingForFirstActionTime += executionTime + breakTime - currentProcess.getArrivalTime();
 
                     int timeToExecute = Math.min(currentProcess.getTimeLeft(), quantum);
-                    currentProcess.execute(timeToExecute);
-                    executionTime += timeToExecute;
-
-                    if (currentProcess.isDone()) {
-                        int waitingTime = executionTime + breakTime - timeToExecute - currentProcess.getArrivalTime();
-                        if (waitingTime > maxWaitingTime) maxWaitingTime = waitingTime;
-                        summaryWaitingTime += waitingTime;
+                    int waitingTime = executionTime + breakTime - currentProcess.getArrivalTime();
+                    if (waitingTime > hungerLevel) {
+                        starvedProcesses++;
+                        currentProcess.execute();
+                    }
+                    else {
+                        executionTime += timeToExecute;
+                        currentProcess.execute(timeToExecute);
+                        if (currentProcess.isDone()) {
+                            if (waitingTime > maxWaitingTime) maxWaitingTime = waitingTime;
+                            summaryWaitingTime += waitingTime;
+                        }
                     }
                 }
                 i++;
@@ -68,9 +76,9 @@ public class RR implements ExecutableWithStatistic {
         int listSize = allList.size();
         this.statistic = new Statistic("RR",
                 listSize, changeContent, executionTime, breakTime,
-                listSize > 0 ? (int)(summaryWaitingTime / listSize) : null,
-                maxWaitingTime,
-                listSize > 0 ? (int)(summaryWaitingForFirstActionTime / listSize) : null
+                listSize > 0 ? (int)(summaryWaitingTime / (listSize - starvedProcesses)) : null,
+                maxWaitingTime, starvedProcesses,
+                listSize > 0 ? (int)(summaryWaitingForFirstActionTime / (listSize - starvedProcesses)) : null
         );
     }
 

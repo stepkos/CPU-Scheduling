@@ -10,13 +10,16 @@ import java.util.List;
 public class FCFS implements ExecutableWithStatistic {
     private final ProcessList processList;
     private final int listSize;
+    private final int hungerLevel;
     private Statistic statistic = null;
     private int executionTime = 0;
     private int breakTime = 0;
     private long summaryWaitingTime = 0;
     private int maxWaitingTime = 0;
+    private int starvedProcesses = 0;
 
-    public FCFS(ProcessList processList) {
+    public FCFS(ProcessList processList, int hungerLevel) {
+        this.hungerLevel = hungerLevel;
         this.processList = processList;
         this.processList.sort(Comparator.comparingInt(Process::getArrivalTime));
         listSize = processList.getList().size();
@@ -31,8 +34,11 @@ public class FCFS implements ExecutableWithStatistic {
             else {
                 int waitingTime = executionTime + breakTime - actualList.get(0).getArrivalTime();
                 if (waitingTime > maxWaitingTime) maxWaitingTime = waitingTime;
+                if (waitingTime > hungerLevel)
+                    starvedProcesses++;
+                else
+                    executionTime += actualList.get(0).execute();
                 summaryWaitingTime += waitingTime;
-                executionTime += actualList.get(0).execute();
                 processList.getList().remove(actualList.get(0));
             }
         }
@@ -40,9 +46,9 @@ public class FCFS implements ExecutableWithStatistic {
         // Make stats
         this.statistic = new Statistic("FCFS",
                 listSize, listSize, executionTime, breakTime,
-                listSize > 0 ? (int)(summaryWaitingTime / listSize) : null,
-                maxWaitingTime,
-                listSize > 0 ? (int)(summaryWaitingTime / listSize) : null
+                listSize > 0 ? (int)(summaryWaitingTime / (listSize - starvedProcesses)) : null,
+                maxWaitingTime, starvedProcesses,
+                listSize > 0 ? (int)(summaryWaitingTime / (listSize - starvedProcesses)) : null
         );
     }
 

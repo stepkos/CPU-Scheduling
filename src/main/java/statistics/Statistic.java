@@ -1,7 +1,7 @@
 package statistics;
 
 public record Statistic(String name, int processAmount, int changeContentAmount, int executionTime,
-        int breakTime, int avgWaitingTime, int maxWaitingTime, int avgWaitingForFirstActionTime) {
+        int breakTime, int avgWaitingTime, int maxWaitingTime, int starvedProcesses, int avgWaitingForFirstActionTime) {
 
     @Override
     public String toString() {
@@ -13,8 +13,9 @@ public record Statistic(String name, int processAmount, int changeContentAmount,
                 ", breakTime=" + breakTime +
                 ", avgWaitingTime=" + avgWaitingTime +
                 ", maxWaitingTime=" + maxWaitingTime +
+                ", starvedProcesses=" + starvedProcesses +
                 ", avgWaitingForFirstActionTime=" + avgWaitingForFirstActionTime +
                 '}';
     }
-
+    
 }

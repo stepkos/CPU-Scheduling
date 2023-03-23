@@ -6,9 +6,9 @@ public class Main {
         new StatisticPresenter().demo();
 
         // TODO stasystyki o liscie procesow
-        // - jaka srednia dlugosc
-        // - ile srednich, krotkich, dlugich
+        // - jaka srednia dlugos
+        // - ile srednich, krotich, dlugich
 
-
+        // TODO Granica glodzenia
     }
 }
