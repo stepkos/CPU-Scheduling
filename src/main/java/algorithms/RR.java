@@ -34,7 +34,7 @@ public class RR implements ExecutableWithStatistic {
         int i = 0;
 
         while (!processList.isDone()) {
-            if (processList.getExistsAndNotDoneList(executionTime + breakTime).isEmpty())
+            if (processList.isProcessToDo(executionTime + breakTime))
                 breakTime++;
             else {
                 Process currentProcess = allList.get(i % allList.size());

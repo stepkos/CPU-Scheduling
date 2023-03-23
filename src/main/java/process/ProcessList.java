@@ -28,6 +28,12 @@ public class ProcessList {
                 .toList());
     }
 
+    public boolean isProcessToDo(int time) {
+        return processList.stream()
+                .filter(x -> x.exists(time) && !x.isDone())
+                .findFirst().isEmpty();
+    }
+
     public void sort(Comparator<? super Process> comp) {
         processList.sort(comp);
     }
