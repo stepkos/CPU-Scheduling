@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30c2f282-be31-46c1-b999-1059cd292848" name="Changes" comment="Cosmetic">
+    <list default="true" id="30c2f282-be31-46c1-b999-1059cd292848" name="Changes" comment="Locate format string">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/statistics/StatisticPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/statistics/StatisticPresenter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +54,6 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -90,8 +91,7 @@
       <workItem from="1679407759093" duration="44000" />
       <workItem from="1679407816350" duration="216000" />
       <workItem from="1679408051641" duration="47000" />
-      <workItem from="1679408113324" duration="39242000" />
-      <workItem from="1679594896689" duration="451000" />
+      <workItem from="1679408113324" duration="35558000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1678925895631</created>
@@ -268,21 +268,7 @@
       <option name="project" value="LOCAL" />
       <updated>1679572318738</updated>
     </task>
-    <task id="LOCAL-00026" summary="Cosmetic">
-      <created>1679581340476</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1679581340476</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Cosmetic">
-      <created>1679594283838</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1679594283838</updated>
-    </task>
-    <option name="localTasksCounter" value="28" />
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,6 +286,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
     <MESSAGE value="Process class" />
     <MESSAGE value="Process class - simplify" />
     <MESSAGE value="Generate process list" />
@@ -324,8 +311,7 @@
     <MESSAGE value="Add starved processes" />
     <MESSAGE value="Important optimize Round Robin" />
     <MESSAGE value="Locate format string" />
-    <MESSAGE value="Cosmetic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cosmetic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Locate format string" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
