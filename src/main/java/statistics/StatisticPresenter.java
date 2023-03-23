@@ -8,8 +8,10 @@ import process.ProcessesGenerator;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 
 public class StatisticPresenter {
+    private final Locale locale = new Locale("pl", "PL", "S");
     private int amountOfProcesses = 20000;
     private int quantumOfTimeForRR = 12;
     private int maxArrivalTime = 150000;
@@ -51,15 +53,15 @@ public class StatisticPresenter {
     }
 
     private void printClassSettings() {
-        System.out.printf("Amount of processes: %d\n", amountOfProcesses);
-        System.out.printf("Arrival time range <1, %d>\n", maxArrivalTime);
+        System.out.printf(locale, "Amount of processes: %,d\n", amountOfProcesses);
+        System.out.printf(locale, "Arrival time range <1, %,d>\n", maxArrivalTime);
         System.out.printf("Processes length range <%d, %d>\n", minProcessLength, maxProcessLength);
         System.out.printf("Probability distribution: Short<%d, %d> 30%% | Medium<%d, %d> 60%% | Long<%d, %d> 10%%\n",
                 minProcessLength, minProcessLength + maxProcessLength/3,
                 minProcessLength + maxProcessLength/3 + 1, minProcessLength + (maxProcessLength/3)*2,
                 minProcessLength + (maxProcessLength/3)*2 + 1, maxProcessLength);
         System.out.println("Quantum of time for RR (Round Rabin): " + quantumOfTimeForRR);
-        System.out.println("Hunger level: " + hungerLevel);
+        System.out.printf(locale, "Hunger level: %,d\n", hungerLevel);
     }
 
     private void printTableLine() {
@@ -71,7 +73,7 @@ public class StatisticPresenter {
     }
 
     private void printTableRow(Statistic stats) {
-        System.out.printf("| %9s | %13d | %19d | %13d | %9d | %14d | %14d | %13d | %28d |\n",
+        System.out.printf(locale, "| %9s | %,13d | %,19d | %,13d | %,9d | %,14d | %,14d | %,13d | %,28d |\n",
                 stats.name(), stats.processAmount(), stats.changeContentAmount(), stats.executionTime(), stats.breakTime(), stats.avgWaitingTime(), stats.maxWaitingTime(), stats.starvedProcesses(), stats.avgWaitingForFirstActionTime());
 
     }

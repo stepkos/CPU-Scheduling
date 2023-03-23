@@ -5,10 +5,5 @@ public class Main {
 
         new StatisticPresenter().demo();
 
-        // TODO stasystyki o liscie procesow
-        // - jaka srednia dlugos
-        // - ile srednich, krotich, dlugich
-
-        // TODO Granica glodzenia
     }
 }
