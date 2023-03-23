@@ -12,12 +12,12 @@ import java.util.Locale;
 
 public class StatisticPresenter {
     private final Locale locale = new Locale("pl", "PL", "S");
-    private int amountOfProcesses = 20000;
+    private int amountOfProcesses = 20_000;
     private int quantumOfTimeForRR = 12;
-    private int maxArrivalTime = 150000;
+    private int maxArrivalTime = 150_000;
     private int minProcessLength = 1;
     private int maxProcessLength = 20;
-    private int hungerLevel = 100000;
+    private int hungerLevel = 100_000;
 
     public StatisticPresenter() { }
 
