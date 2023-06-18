@@ -75,7 +75,6 @@ public class StatisticPresenter {
     private void printTableRow(Statistic stats) {
         System.out.printf(locale, "| %9s | %,13d | %,19d | %,13d | %,9d | %,14d | %,14d | %,13d | %,28d |\n",
                 stats.name(), stats.processAmount(), stats.changeContentAmount(), stats.executionTime(), stats.breakTime(), stats.avgWaitingTime(), stats.maxWaitingTime(), stats.starvedProcesses(), stats.avgWaitingForFirstActionTime());
-
     }
 
     public int getAmountOfProcesses() {
